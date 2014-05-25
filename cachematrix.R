@@ -22,6 +22,7 @@ cacheSolve <- function(x, ...) {
     ptm <- proc.time()       
     c <- x$getinv()          ## Get inverse matrix 'c' from cache
     if(!is.null(c)) {        ## Check if not NULL, return value read from cache
+        message("Getting cached data")
         cat("Process Time", proc.time() - ptm)
         return(c)
     }
